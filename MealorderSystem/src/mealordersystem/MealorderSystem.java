@@ -27,17 +27,29 @@ public class MealorderSystem {
         System.out.print("Please enter the amount you are paying: ");
         double amountPaid = scanner.nextDouble();
 
-        // Calculate change
-        double change = amountPaid - mealPrice;
-
-        // Display change
+         // Check if the amount paid is sufficient
+        if (amountPaid >= mealPrice) {
+            
+          // Calculate change
+        double change = amountPaid - mealPrice;  
+        
+        System.out.println("Thank you for your payment");
         System.out.println("Thank you for your order, " + userName + "!");
         System.out.println("You ordered: " + meal);
         System.out.println("Your meal costs: R" + mealPrice);
         System.out.println("You paid: R" + amountPaid);
         System.out.println("Your change: R" + change);
-
-        // Close the scanner
         scanner.close();
+        } 
+        else 
+        {
+        System.out.println("Insufficient payment. Please provide additional payment.");
+        scanner.close();
+        }
+             
+        
+       
+
+        
     }
 }
