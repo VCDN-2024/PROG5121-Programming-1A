@@ -1,31 +1,39 @@
+
 package car;
-public class Car {
-    // Attributes
-    String make;
+
+
+public class Car 
+{  
+    // Fields or attributes
+    String brand;
     String model;
     int year;
-    
-    // Constructor with parameters
-    public Car(String make, String model, int year) {
-        this.make = make;
+
+    // Constructor
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
         this.model = model;
         this.year = year;
-        //this is a keyword that refers to the current instance of the class.
     }
-    // Default constructor
-    public Car() {
-         // Default values or setup logic can be added here
-        this.make = "Unknown Make";
-        this.model = "Unknown Model";
-        this.year = 0;
-    }
-      // Method to display car information
-    public void displayCarInfo() {
+
+    // Method to display information about the car
+    public void displayInfo() {
         System.out.println("Car Information:");
-        System.out.println("Make: " + make);
+        System.out.println("Brand: " + brand);
         System.out.println("Model: " + model);
         System.out.println("Year: " + year);
     }
-    // Other methods and code for the Car class
-}
 
+    // Method to start the car
+    public void start() {
+        System.out.println("The car is starting.");
+    }
+
+    // Method to stop the car
+    public void stop() {
+        System.out.println("The car is stopping.");
+        
+    //Add any additional Methods...
+    }
+    
+}
